@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,13 +48,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjF-8U-q32">
-                                <rect key="frame" x="166" y="152" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Who was the first prime minister?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjF-8U-q32">
+                                <rect key="frame" x="59" y="84" width="257" height="74"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-1F-pHs">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-1F-pHs">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="BluemixTrivia" id="xbl-ol-3Hm">
@@ -65,16 +66,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-yZ-DhK">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-yZ-DhK">
                                 <rect key="frame" x="0.0" y="615" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="rewind" id="g0x-Hj-kiG"/>
-                                    <barButtonItem width="271" style="plain" systemItem="fixedSpace" id="aE1-6c-f9S"/>
-                                    <barButtonItem systemItem="fastForward" id="bnQ-VS-UnN"/>
+                                    <barButtonItem title="⬅️" id="g0x-Hj-kiG"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PVI-Km-bkF"/>
+                                    <barButtonItem title="➡️" id="bnQ-VS-UnN"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-Qd-dVx">
-                                <rect key="frame" x="45" y="235" width="285" height="281"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-Qd-dVx">
+                                <rect key="frame" x="45" y="220" width="285" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BJd-si-zes" id="2hQ-rn-7at"/>
@@ -83,15 +84,85 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="26" id="0Th-i5-351"/>
+                            <constraint firstItem="pr9-1F-pHs" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="-16" id="2ha-eC-imM"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="43" id="2pP-aQ-Dhe"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="29" id="5Rl-d6-top"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="top" secondItem="pr9-1F-pHs" secondAttribute="bottom" constant="20" id="79r-7r-6XY"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="62" id="8dg-WE-iKb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjF-8U-q32" secondAttribute="trailing" constant="43" id="8mA-Io-qvA"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="62" id="Aov-j5-182"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="top" secondItem="pr9-1F-pHs" secondAttribute="bottom" constant="20" id="BGV-v0-Nbp"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="29" id="G2O-tB-XNR"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="top" relation="lessThanOrEqual" secondItem="eEI-Qd-dVx" secondAttribute="bottom" constant="167" id="Hw5-aa-jZm"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="43" id="IOZ-cp-fiZ"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" relation="lessThanOrEqual" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="62" id="Ibx-0h-9zt"/>
+                            <constraint firstItem="Meb-1v-Epb" firstAttribute="top" secondItem="8Ha-yZ-DhK" secondAttribute="bottom" constant="8" id="Iuq-JH-OBW"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="62" id="QJb-Y7-2V4"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="43" id="SyO-qw-wxl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pr9-1F-pHs" secondAttribute="trailing" constant="-16" id="UIU-6A-lp8"/>
+                            <constraint firstItem="Meb-1v-Epb" firstAttribute="top" secondItem="8Ha-yZ-DhK" secondAttribute="bottom" constant="8" id="Uom-Iy-gRa"/>
+                            <constraint firstItem="pr9-1F-pHs" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="-16" id="ZC1-tW-pYL"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="29" id="bfZ-mA-4d4"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="-10" id="byK-Yk-Rx2"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="top" secondItem="pr9-1F-pHs" secondAttribute="bottom" constant="20" id="cKA-oo-zXy"/>
+                            <constraint firstItem="BjF-8U-q32" firstAttribute="top" secondItem="pr9-1F-pHs" secondAttribute="bottom" constant="20" id="dku-Vn-IEY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEI-Qd-dVx" secondAttribute="trailing" constant="29" id="e9I-hK-PtV"/>
+                            <constraint firstItem="eEI-Qd-dVx" firstAttribute="top" secondItem="BjF-8U-q32" secondAttribute="bottom" constant="26" id="fHx-KY-ZCA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEI-Qd-dVx" secondAttribute="trailing" constant="29" id="iLu-5k-17d"/>
+                            <constraint firstItem="pr9-1F-pHs" firstAttribute="top" secondItem="2we-QL-RBE" secondAttribute="bottom" id="lAy-UN-35s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Ha-yZ-DhK" secondAttribute="trailing" constant="-16" id="m8w-SM-juG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Ha-yZ-DhK" secondAttribute="trailing" constant="-22" id="mSk-bo-Q4s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pr9-1F-pHs" secondAttribute="trailing" constant="-16" id="nRr-1a-EwQ"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="top" secondItem="eEI-Qd-dVx" secondAttribute="bottom" constant="167" id="nl3-rA-S9t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjF-8U-q32" secondAttribute="trailing" constant="43" id="qJY-oH-UHf"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="top" secondItem="eEI-Qd-dVx" secondAttribute="bottom" constant="148" id="rEW-qz-hhI"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="top" secondItem="eEI-Qd-dVx" secondAttribute="bottom" constant="148" id="rq6-eq-N1o"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="leading" secondItem="qzd-1Z-qrS" secondAttribute="leadingMargin" constant="-16" id="u3w-k1-7yd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEI-Qd-dVx" secondAttribute="trailing" constant="29" id="uI3-Na-2gg"/>
+                            <constraint firstItem="pr9-1F-pHs" firstAttribute="top" secondItem="2we-QL-RBE" secondAttribute="bottom" id="wCf-OA-h8C"/>
+                            <constraint firstItem="8Ha-yZ-DhK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eEI-Qd-dVx" secondAttribute="bottom" constant="167" id="yWv-1b-5Gs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjF-8U-q32" secondAttribute="trailing" constant="43" id="zvq-0P-Gqy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZC1-tW-pYL"/>
+                                <exclude reference="nRr-1a-EwQ"/>
+                                <exclude reference="wCf-OA-h8C"/>
+                                <exclude reference="8mA-Io-qvA"/>
+                                <exclude reference="BGV-v0-Nbp"/>
+                                <exclude reference="IOZ-cp-fiZ"/>
+                                <exclude reference="SyO-qw-wxl"/>
+                                <exclude reference="cKA-oo-zXy"/>
+                                <exclude reference="dku-Vn-IEY"/>
+                                <exclude reference="zvq-0P-Gqy"/>
+                                <exclude reference="0Th-i5-351"/>
+                                <exclude reference="5Rl-d6-top"/>
+                                <exclude reference="8dg-WE-iKb"/>
+                                <exclude reference="G2O-tB-XNR"/>
+                                <exclude reference="QJb-Y7-2V4"/>
+                                <exclude reference="fHx-KY-ZCA"/>
+                                <exclude reference="iLu-5k-17d"/>
+                                <exclude reference="uI3-Na-2gg"/>
+                                <exclude reference="byK-Yk-Rx2"/>
+                                <exclude reference="mSk-bo-Q4s"/>
+                                <exclude reference="nl3-rA-S9t"/>
+                                <exclude reference="rEW-qz-hhI"/>
+                                <exclude reference="rq6-eq-N1o"/>
+                                <exclude reference="Uom-Iy-gRa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="ansTable" destination="eEI-Qd-dVx" id="Hqh-wy-ylk"/>
                         <outlet property="questionLbl" destination="BjF-8U-q32" id="JTd-S0-luH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4Q-Eh-Cmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.5" y="428.5"/>
+            <point key="canvasLocation" x="980.5" y="428.5"/>
         </scene>
     </scenes>
 </document>
