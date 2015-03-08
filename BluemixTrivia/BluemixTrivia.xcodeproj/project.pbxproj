@@ -15,7 +15,7 @@
 		80EB1CFB1AA5E0CC001CDCB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFA1AA5E0CC001CDCB3 /* Images.xcassets */; };
 		80EB1CFE1AA5E0CC001CDCB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFC1AA5E0CC001CDCB3 /* LaunchScreen.xib */; };
 		80EB1D0A1AA5E0CC001CDCB3 /* BluemixTriviaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1D091AA5E0CC001CDCB3 /* BluemixTriviaTests.m */; };
-		F7A8535C1AAC78630007AF18 /* GameViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A8535B1AAC78630007AF18 /* GameViewContorller.m */; };
+		F79C9BDC1AAC971500DB3E3C /* GameViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A8535B1AAC78630007AF18 /* GameViewContorller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79C9BDC1AAC971500DB3E3C /* GameViewContorller.m in Sources */,
 				80650BB81AAC76AD00763C6C /* TRVQuestion.m in Sources */,
 				80EB1CF61AA5E0CC001CDCB3 /* ViewController.m in Sources */,
 				80EB1CF31AA5E0CC001CDCB3 /* AppDelegate.m in Sources */,

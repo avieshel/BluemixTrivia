@@ -7,12 +7,19 @@
 //
 
 #import "GameViewContorller.h"
+#import "TRVQuestion.h"
 
 @interface GameViewContorller ()
 
-@property (weak, nonatomic) IBOutlet UILabel *questionLbl;
-@property NSArray *ansArray;
+@property (weak, nonatomic) IBOutlet UILabel *qusetionLbl;
 @property (weak, nonatomic) IBOutlet UITableView *ansTable;
+@property (weak, nonatomic) IBOutlet UILabel *ansStatus;
+
+
+@property TRVQuestion *someQuestion;
+@property NSArray *ansArray;
+@property NSArray *questionsArray;
+
 
 @end
 
@@ -23,8 +30,14 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    self.ansArray = @[@"David Ben Gurion",@"Moshe Sharet",@"Ehud Barak",@"Benjamin Netanyahu"];
     
+    self.ansTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.someQuestion = [[TRVQuestion alloc] init];
+    self.qusetionLbl.text = self.someQuestion.question;
+    self.ansArray = self.someQuestion.answers;
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,27 +75,31 @@
     return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:
-(NSInteger)section{
-    NSString *headerTitle;
-    headerTitle = @"";
-    return headerTitle;
-}
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:
-(NSInteger)section{
-    NSString *footerTitle;
-    footerTitle = @"";
-    return footerTitle;
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:
+//(NSInteger)section{
+//    NSString *headerTitle;
+//    headerTitle = @"";
+//    return headerTitle;
+//}
+//- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:
+//(NSInteger)section{
+//    NSString *footerTitle;
+//    footerTitle = @"";
+//    return footerTitle;
+//}
 
 #pragma mark - TableView delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
 (NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"Section:%d Row:%d selected and its data is %@",
-          indexPath.section,indexPath.row,cell.textLabel.text);
+    if (indexPath.row+1 == self.someQuestion.answer) {
+        self.ansStatus.text = @"✅";
+    }
+    else{
+        self.ansStatus.text = @"❌";
+    }
+        
 }
 
 
