@@ -14,6 +14,7 @@
 		80EB1CFB1AA5E0CC001CDCB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFA1AA5E0CC001CDCB3 /* Images.xcassets */; };
 		80EB1CFE1AA5E0CC001CDCB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFC1AA5E0CC001CDCB3 /* LaunchScreen.xib */; };
 		80EB1D0A1AA5E0CC001CDCB3 /* BluemixTriviaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1D091AA5E0CC001CDCB3 /* BluemixTriviaTests.m */; };
+		F7A8535C1AAC78630007AF18 /* GameViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A8535B1AAC78630007AF18 /* GameViewContorller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		80EB1D031AA5E0CC001CDCB3 /* BluemixTriviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluemixTriviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EB1D081AA5E0CC001CDCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EB1D091AA5E0CC001CDCB3 /* BluemixTriviaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluemixTriviaTests.m; sourceTree = "<group>"; };
+		F7A8535A1AAC78630007AF18 /* GameViewContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewContorller.h; sourceTree = "<group>"; };
+		F7A8535B1AAC78630007AF18 /* GameViewContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewContorller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				80EB1CF21AA5E0CC001CDCB3 /* AppDelegate.m */,
 				80EB1CF41AA5E0CC001CDCB3 /* ViewController.h */,
 				80EB1CF51AA5E0CC001CDCB3 /* ViewController.m */,
+				F7A8535A1AAC78630007AF18 /* GameViewContorller.h */,
+				F7A8535B1AAC78630007AF18 /* GameViewContorller.m */,
 				80EB1CF71AA5E0CC001CDCB3 /* Main.storyboard */,
 				80EB1CFA1AA5E0CC001CDCB3 /* Images.xcassets */,
 				80EB1CFC1AA5E0CC001CDCB3 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A8535C1AAC78630007AF18 /* GameViewContorller.m in Sources */,
 				80EB1CF61AA5E0CC001CDCB3 /* ViewController.m in Sources */,
 				80EB1CF31AA5E0CC001CDCB3 /* AppDelegate.m in Sources */,
 				80EB1CF01AA5E0CC001CDCB3 /* main.m in Sources */,
@@ -414,6 +420,7 @@
 				80EB1D0F1AA5E0CC001CDCB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80EB1D101AA5E0CC001CDCB3 /* Build configuration list for PBXNativeTarget "BluemixTriviaTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				80EB1D121AA5E0CC001CDCB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
