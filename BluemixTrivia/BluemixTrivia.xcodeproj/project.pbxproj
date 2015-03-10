@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		80650BB81AAC76AD00763C6C /* TRVQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 80650BB71AAC76AD00763C6C /* TRVQuestion.m */; };
+		80650BBA1AAEE58F00763C6C /* IMFCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80650BB91AAEE58F00763C6C /* IMFCore.framework */; };
+		80650BBC1AAEE5A300763C6C /* IMFData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80650BBB1AAEE5A300763C6C /* IMFData.framework */; };
+		80650BC31AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80650BBF1AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.m */; };
+		80650BC41AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80650BC21AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.m */; };
 		80EB1CF01AA5E0CC001CDCB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1CEF1AA5E0CC001CDCB3 /* main.m */; };
 		80EB1CF31AA5E0CC001CDCB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1CF21AA5E0CC001CDCB3 /* AppDelegate.m */; };
 		80EB1CF61AA5E0CC001CDCB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1CF51AA5E0CC001CDCB3 /* ViewController.m */; };
@@ -15,7 +19,6 @@
 		80EB1CFB1AA5E0CC001CDCB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFA1AA5E0CC001CDCB3 /* Images.xcassets */; };
 		80EB1CFE1AA5E0CC001CDCB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80EB1CFC1AA5E0CC001CDCB3 /* LaunchScreen.xib */; };
 		80EB1D0A1AA5E0CC001CDCB3 /* BluemixTriviaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80EB1D091AA5E0CC001CDCB3 /* BluemixTriviaTests.m */; };
-		F7A8535C1AAC78630007AF18 /* GameViewContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A8535B1AAC78630007AF18 /* GameViewContorller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,13 @@
 /* Begin PBXFileReference section */
 		80650BB61AAC76AD00763C6C /* TRVQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRVQuestion.h; path = ../TRVQuestion.h; sourceTree = "<group>"; };
 		80650BB71AAC76AD00763C6C /* TRVQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRVQuestion.m; path = ../TRVQuestion.m; sourceTree = "<group>"; };
+		80650BB91AAEE58F00763C6C /* IMFCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMFCore.framework; path = "../../../Downloads/imf-ios-sdk/Frameworks/IMFCore.framework"; sourceTree = "<group>"; };
+		80650BBB1AAEE5A300763C6C /* IMFData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMFData.framework; path = "../../../Downloads/imf-ios-sdk/Frameworks/IMFData.framework"; sourceTree = "<group>"; };
+		80650BBE1AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMFDefaultGoogleAuthenticationDelegate.h; path = "../../../../Downloads/imf-ios-sdk/Sources/Authenticators/IMFGoogleAuthentication/IMFDefaultGoogleAuthenticationDelegate.h"; sourceTree = "<group>"; };
+		80650BBF1AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMFDefaultGoogleAuthenticationDelegate.m; path = "../../../../Downloads/imf-ios-sdk/Sources/Authenticators/IMFGoogleAuthentication/IMFDefaultGoogleAuthenticationDelegate.m"; sourceTree = "<group>"; };
+		80650BC01AAF0CF700763C6C /* IMFGoogleAuthenticationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMFGoogleAuthenticationDelegate.h; path = "../../../../Downloads/imf-ios-sdk/Sources/Authenticators/IMFGoogleAuthentication/IMFGoogleAuthenticationDelegate.h"; sourceTree = "<group>"; };
+		80650BC11AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMFGoogleAuthenticationHandler.h; path = "../../../../Downloads/imf-ios-sdk/Sources/Authenticators/IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h"; sourceTree = "<group>"; };
+		80650BC21AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMFGoogleAuthenticationHandler.m; path = "../../../../Downloads/imf-ios-sdk/Sources/Authenticators/IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.m"; sourceTree = "<group>"; };
 		80EB1CEA1AA5E0CC001CDCB3 /* BluemixTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluemixTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80EB1CEE1AA5E0CC001CDCB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EB1CEF1AA5E0CC001CDCB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80650BBC1AAEE5A300763C6C /* IMFData.framework in Frameworks */,
+				80650BBA1AAEE58F00763C6C /* IMFCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +81,8 @@
 		80EB1CE11AA5E0CC001CDCB3 = {
 			isa = PBXGroup;
 			children = (
+				80650BBB1AAEE5A300763C6C /* IMFData.framework */,
+				80650BB91AAEE58F00763C6C /* IMFCore.framework */,
 				80EB1CEC1AA5E0CC001CDCB3 /* BluemixTrivia */,
 				80EB1D061AA5E0CC001CDCB3 /* BluemixTriviaTests */,
 				80EB1CEB1AA5E0CC001CDCB3 /* Products */,
@@ -87,6 +101,11 @@
 		80EB1CEC1AA5E0CC001CDCB3 /* BluemixTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				80650BBE1AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.h */,
+				80650BBF1AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.m */,
+				80650BC01AAF0CF700763C6C /* IMFGoogleAuthenticationDelegate.h */,
+				80650BC11AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.h */,
+				80650BC21AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.m */,
 				80EB1CF11AA5E0CC001CDCB3 /* AppDelegate.h */,
 				80EB1CF21AA5E0CC001CDCB3 /* AppDelegate.m */,
 				80650BB61AAC76AD00763C6C /* TRVQuestion.h */,
@@ -229,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80650BC41AAF0CF700763C6C /* IMFGoogleAuthenticationHandler.m in Sources */,
 				80650BB81AAC76AD00763C6C /* TRVQuestion.m in Sources */,
 				80EB1CF61AA5E0CC001CDCB3 /* ViewController.m in Sources */,
+				80650BC31AAF0CF700763C6C /* IMFDefaultGoogleAuthenticationDelegate.m in Sources */,
 				80EB1CF31AA5E0CC001CDCB3 /* AppDelegate.m in Sources */,
 				80EB1CF01AA5E0CC001CDCB3 /* main.m in Sources */,
 			);
@@ -356,6 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/avie/Downloads/imf-ios-sdk/Frameworks",
+				);
 				INFOPLIST_FILE = BluemixTrivia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/avie/Downloads/imf-ios-sdk/Frameworks",
+				);
 				INFOPLIST_FILE = BluemixTrivia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

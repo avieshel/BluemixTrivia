@@ -7,6 +7,7 @@
 //
 
 #import "GameViewContorller.h"
+#import <CloudantToolkit/CloudantToolkit.h>
 
 @interface GameViewContorller ()
 

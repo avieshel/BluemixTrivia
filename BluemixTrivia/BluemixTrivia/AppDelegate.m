@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <IMFCore/IMFCore.h>
+#import <IMFData/IMFData.h>
+#import "IMFGoogleAuthenticationHandler.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,33 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // Initialize the IMFCore SDK
+    NSString *appId = @"6a7dc196-1224-4a3a-99f4-99c6f4c78224";
+    NSString *appRoute = @"https://trivia.stage1.mybluemix.net";
+    
+    // initialize SDK with IBM Bluemix application ID and route
+    IMFClient  *imfClient = [IMFClient sharedInstance];
+    [imfClient initializeWithBackendRoute:appRoute backendGUID:appId];
+    
+    // initialize an instance of the IMFDataManager
+    //IMFDataManager *manager = [IMFDataManager sharedInstance];
+    
+    // Creating a local data store
+    NSError *error;
+    CDTStore *store = [[IMFDataManager sharedInstance] localStore:@"localTrivia" error: &error];
+    
+    
+    // Creating a remote data store
+    [[IMFDataManager sharedInstance] remoteStore:@"Trivia" completionHandler:^(CDTStore *store, NSError *error) {
+        // Remote store will be passed into the control handler if no errors occurred.
+        CDTStore *remoteStore = store;
+    }];
+    
+    // Register a default delegate.
+    // Logs in to Google with read permissions to the user's public profile.
+    [[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
+    
     return YES;
 }
 
